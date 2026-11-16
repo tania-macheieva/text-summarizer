@@ -1,0 +1,12 @@
+{
+  "documents": 2225,
+  "reference_sentences": 16504,
+  "reference_sentences_verbatim_in_article": 13969,
+  "verbatim_share": 0.8464,
+  "documents_with_ge3_matched_sentences": 2108,
+  "documents_reference_order_equals_article_order": 81,
+  "share_documents_in_article_order": 0.0384,
+  "mean_kendall_tau_reference_vs_article_order": 0.1094,
+  "mean_relative_position_of_reference_sentences": 0.4318,
+  "method": "речення еталона шукаються як підрядок у статті (після нормалізації пробілів); позиція — зсув символів"
+}

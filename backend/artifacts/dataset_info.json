@@ -1,0 +1,103 @@
+{
+  "name": "BBC News Summary",
+  "path": "/home/claude/text-summarizer/backend/data/bbc",
+  "seed": 42,
+  "fractions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "loading": {
+    "non_utf8_files": 1,
+    "articles_without_summary": 0,
+    "summaries_without_article": 0
+  },
+  "validation": {
+    "input_rows": 2225,
+    "dropped": {
+      "empty_text": 0,
+      "empty_reference": 0,
+      "text_too_short": 0,
+      "reference_too_short": 0,
+      "reference_longer_than_text": 0,
+      "too_few_sentences": 0
+    },
+    "output_rows": 2225,
+    "total_dropped": 0
+  },
+  "statistics": {
+    "documents": 2225,
+    "categories": {
+      "business": 510,
+      "entertainment": 386,
+      "politics": 417,
+      "sport": 511,
+      "tech": 401
+    },
+    "text_words": {
+      "mean": 384.26,
+      "median": 332.0,
+      "min": 89.0,
+      "max": 4424.0,
+      "std": 237.08
+    },
+    "reference_words": {
+      "mean": 172.1,
+      "median": 148.0,
+      "min": 39.0,
+      "max": 2168.0,
+      "std": 112.91
+    },
+    "text_sentences": {
+      "mean": 18.8,
+      "median": 16.0,
+      "min": 4.0,
+      "max": 249.0,
+      "std": 13.03
+    },
+    "reference_sentences": {
+      "mean": 7.42,
+      "median": 6.0,
+      "min": 2.0,
+      "max": 93.0,
+      "std": 4.81
+    },
+    "compression_words_mean": 0.4479,
+    "compression_sentences_mean": 0.4031,
+    "exact_duplicate_texts": 101,
+    "documents_in_duplicate_groups": 162,
+    "splits": {
+      "train": {
+        "documents": 1559,
+        "categories": {
+          "business": 357,
+          "entertainment": 271,
+          "politics": 292,
+          "sport": 358,
+          "tech": 281
+        }
+      },
+      "val": {
+        "documents": 336,
+        "categories": {
+          "business": 77,
+          "entertainment": 58,
+          "politics": 64,
+          "sport": 77,
+          "tech": 60
+        }
+      },
+      "test": {
+        "documents": 330,
+        "categories": {
+          "business": 76,
+          "entertainment": 57,
+          "politics": 61,
+          "sport": 76,
+          "tech": 60
+        }
+      }
+    }
+  },
+  "leakage_check": "passed (doc_id і хеші текстів не перетинаються; групи дублікатів не розділені)"
+}
