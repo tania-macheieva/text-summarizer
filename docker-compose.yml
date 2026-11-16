@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    container_name: summarizer-backend
+    ports:
+      - "8000:8000"
+    environment:
+      LOG_LEVEL: INFO
+      CORS_ORIGINS: "http://localhost:3000,http://127.0.0.1:3000"
+    volumes:
+      - ./backend/models:/app/models
+      - ./backend/artifacts:/app/artifacts
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: summarizer-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
